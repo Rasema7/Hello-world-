@@ -1,0 +1,25 @@
+import random
+
+a = random.randint(1, 20)
+
+while True:
+    b = input("Guess a number from 1 to 20 or press x to exit: ")
+    if b == "x":
+        break
+    try:
+        b = int(b)
+    except ValueError:
+        print ("Please enter a number or x to exit: ")
+    if b == a:
+        print ("You guessed!")
+    elif int(b) > 20:
+        print ("I said from 1 to 20 r u dumb?! >:-(")
+    else:
+        print ("Try again!")
+
+    if b == a:
+        print ("Congrats!")
+    elif a > b:
+        print("More")
+    else:
+        print("Less")
